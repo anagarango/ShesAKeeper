@@ -27,9 +27,23 @@ a {
 @media screen and (min-width: 1235px) {
   .hero{
     background-size: cover;
-    
   }
 }
+
+@media screen and (max-width:560px) {
+  .navPage{
+    display:none
+  }
+}
+@media screen and (min-width:561px) {
+  .navPage:hover{
+    color: #81C3D7
+  }
+  .hamburger{
+    display:none
+  }
+}
+
 @media screen and (max-width: 1235px) {
   .hero{
     background-size: contain;

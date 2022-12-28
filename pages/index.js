@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <NavBar/>
         <Hero className="hero" src="/hero.jpeg" width="100vw">
-          <H1 padding="10% 0 0 5%">Clean Home. <br/> Happy Home</H1>
+          <H1 padding="15% 0 0 5%">Clean Home. <br/> Happy Home.</H1>
         </Hero>
 
       </main>
