@@ -1,5 +1,12 @@
 import Head from 'next/head'
 import NavBar from '../comps/navbar'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore from 'swiper'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { Box } from '../comps/global';
 
 export default function Home() {
   return (
@@ -13,6 +20,19 @@ export default function Home() {
       <main>
         <NavBar/>
         <h1>HELLLOO</h1>
+        <h1>HELLLOO</h1>
+        <h1>HELLLOO</h1>
+        <Swiper navigation pagination>
+          <SwiperSlide>
+            <Box width="100px">Hello</Box>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Box width="100px">Hello</Box>
+          </SwiperSlide>
+          {/* <SwiperSlide><Card minWidth={cardWidth} heading="Flexible Schedule" paragraph="Adapt if client wants a weekly, bi-weekly, and monthly recurring cleaning" src="/flexibleIcon.svg"></Card></SwiperSlide>
+          <SwiperSlide> <Card minWidth={cardWidth} heading="Affordable Pricing" paragraph="Determine what your necessary house cleaning needs are to estimate an accurate fair price." src="/priceIcon.svg"></Card></SwiperSlide>
+          <SwiperSlide><Card minWidth={cardWidth} heading="Listen Feedback" paragraph="Communicate if clients are beyond satisfied with the service and adapt to your feedback" src="/feedbackIcon.svg"></Card></SwiperSlide> */}
+         </Swiper>
 
       </main>
     </div>

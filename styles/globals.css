@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  background-color: #F5F5F5
 }
 
 a {
@@ -12,6 +13,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.hero{
+  background-size: cover;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -23,12 +27,6 @@ a {
     background: black;
   }
 } */
-
-@media screen and (min-width: 1235px) {
-  .hero{
-    background-size: cover;
-  }
-}
 
 @media screen and (max-width:560px) {
   .navPage{
@@ -43,10 +41,28 @@ a {
     display:none
   }
 }
+.testimonial[width]{
+  min-width: 65vw;
+  margin-bottom:25px
+}
 
-@media screen and (max-width: 1235px) {
-  .hero{
-    background-size: contain;
-    background-repeat: no-repeat
+@media screen and (max-width:865px) {
+  .reason{
+    flex-direction: column;
+    min-width: 100vw;
+    align-items: center;
   }
+  .cardBox[width]{
+    min-width: 80vw;
+    margin-bottom:25px
+  }
+ 
+}
+
+#__next {
+  height: 100%;
+}
+#map {
+  width:100vw;
+  height: 800px
 }
