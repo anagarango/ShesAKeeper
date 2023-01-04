@@ -1,18 +1,41 @@
 import Head from 'next/head'
 import NavBar from '../comps/navbar'
 import Footer from '../comps/footer'
-import { Hero, H1, H2, H3, H4, Box, PullQuote, Image, Container } from '../comps/global'
+import { Hero, H1, H2, H3, H4, Text, Box, PullQuote, Image, Container } from '../comps/global'
 import Card from '../comps/card'
 import Testimonial from '../comps/testimonial'
-import { useEffect, useState, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper'
 import 'swiper/swiper-bundle.css'
 import 'swiper/css';
-import {Loader} from '@googlemaps/js-api-loader';
 SwiperCore.use([Navigation, Pagination])
+import styled from 'styled-components'
+import { useRouter } from 'next/router'
+
+const Ita = styled.i`
+  display:inline;
+  width:300px;
+  padding:0;
+  margin:0;
+  height:fit-content
+`
+const CTA = styled.button`
+  width:300px;
+  height:fit-content;
+  padding:10px;
+  background-color:white;
+  border: 4px solid #81C3D7;
+  border-radius:10px;
+  color:#81C3D7;
+  font-size:20px;
+  font-weight:600;
+  cursor:pointer
+`
 
 export default function Home() {
+
+  const r = useRouter()
+
   // const [cardWidth, setCardWidth] = useState("150px")
   // const [cardJustCont, setCardJustCont] = useState("")
   // function OnLoad(){
@@ -62,12 +85,14 @@ export default function Home() {
         <Hero className="hero" padding="calc(75px + 15%) 0 calc(75px + 15%) 5%" src="/clean.jpeg" width="100vw" margin="90px 0 0 0" height="fit-content"></Hero>
         <H1 width="calc(100px + 45%)" bgColor="rgba(221,230,213,0.85)" padding="calc(40px + 1%) 5% calc(40px + 1%) 5%" margin="-100px 0 0 0" borderRadius="0 30px 30px 0">Clean Home. <br /> Happy Home.</H1>
         <PullQuote><i>"Having a clean home is one of the many ways that keeps you and your family's lives simpler and I do my best to achieve my client's satisfaction."</i></PullQuote>
-        <H2>Ready for a stress-free clean?</H2>
-        <button>Learn about my services</button>
-        <H3>Sandra Arango, self-employed and owner of <i>She's A Keeper</i> is happy to help out in keeping your house clean and tidy within the Tri-Cities (Coquitlam, Port Coquitlam, and Port Moody) and Pitt Meadows. </H3>
-        <H3>What makes <i>She's A Keeper</i> stand out is the personalized cleaning, where my clients get a free quote for the first visit that allows me to speak with my new client and make sure where they would like me to prioritize my cleaning or make special requests for example to do the laundry on cleaning visits.</H3>
-        <H3>I also welcome feedback to make sure my clients are satisfied and happy with the cleaning, making it a win-win since I'm happy when my clients are happy. As a member of the Tri-City community I'm serving, it brings me happiness that I can give back with helping out its members</H3>
-        <H3>Since <i>She's A Keeper</i> is a self-employed cleaning service with one housekeeper, you can be sure you will getting the consistent cleaning you expect and the security of having the same housekeeper making sure your home is neat and tidy</H3>
+        <H2 width="100vw" textAlign="center">Ready for a stress-free clean?</H2>
+        <Box width="100vw" justCont="center" padding="10px 0 50px 0">
+          <CTA onClick={()=>{r.push("/services")}}>Learn about my services</CTA>
+        </Box>
+        <H4 color="#16425B" padding="10px 70px" fontWeight="500">Sandra Arango, self-employed and owner of <Ita>She's A Keeper</Ita> is happy to help out in keeping your house clean and tidy within the Tri-Cities (Coquitlam, Port Coquitlam, and Port Moody) and Pitt Meadows.</H4>
+        <H4 color="#16425B" padding="10px 70px" fontWeight="500">What makes <Ita>She's A Keeper</Ita> stand out is the personalized cleaning, where my clients get a free quote for the first visit that allows me to speak with my new client and make sure where they would like me to prioritize my cleaning or make special requests for example to do the laundry on cleaning visits.</H4>
+        <H4 color="#16425B" padding="10px 70px" fontWeight="500">I also welcome feedback to make sure my clients are satisfied and happy with the cleaning, making it a win-win since I'm happy when my clients are happy. As a member of the Tri-City community I'm serving, it brings me happiness that I can give back with helping out its members.</H4>
+        <H4 color="#16425B" padding="10px 70px" fontWeight="500">Since <Ita>She's A Keeper</Ita> is a self-employed cleaning service with one housekeeper, you can be sure you will getting the consistent cleaning you expect and the security of having the same housekeeper making sure your home is neat and tidy.</H4>
         {/* <div id="map" ref={googlemap}></div> */}
 
         <Container height="fit-content" aliIt="center" flexDir="column" padding="0px 0px 40px 0px">

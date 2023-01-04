@@ -17,6 +17,7 @@ const CardBox = styled.div`
   background-image: url(${props=>props.bgImage});
   background-size: ${props=>props.bgSize};
   background-repeat: ${props=>props.bgRepeat};
+  margin:${props=>props.margin};
 `
 
 export default function Card({
@@ -39,16 +40,18 @@ export default function Card({
     classs="cardBox",
     bgSize,
     bgImage,
-    bgRepeat
+    bgRepeat,
+    show="ok",
+    margin=""
 
 
 }) {
 
   return (
-    <CardBox className={classs} maxWidth={maxWidth}  minWidth={minWidth} minHeight={minHeight} width={width} height={height} bgColor={bgColor} borRadius={borRadius} bxShadow={bxShadow} bgImage={bgImage} bgSize={bgSize} bgRepeat={bgRepeat}>
+    <CardBox margin={margin} className={classs} maxWidth={maxWidth}  minWidth={minWidth} minHeight={minHeight} width={width} height={height} bgColor={bgColor} borRadius={borRadius} bxShadow={bxShadow} bgImage={bgImage} bgSize={bgSize} bgRepeat={bgRepeat}>
         <Image padding={paddingImg} width={widthImg} height={heightImg} src={src}></Image>
         <H4 color={headingColor} margin="0 0 7px 0" textAlign={textAlign}>{heading}</H4>
-        <Text textAlign={textAlign}>{paragraph}</Text>
+        {show == "ok" && <Text textAlign={textAlign}>{paragraph}</Text>}
     </CardBox>
   )
 }

@@ -13,7 +13,7 @@ const NavBarContainer = styled.div`
     box-shadow: 0px 5px 10px grey;
     position:fixed;
     top:0;
-    z-index:2
+    z-index:15
 `
 const Cont = styled.div`
     display:flex;

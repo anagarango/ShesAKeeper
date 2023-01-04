@@ -11,7 +11,8 @@ export const H1 = styled.h1`
     width:${props=>props.width};
     background-color:${props=>props.bgColor};
     border-radius:${props=>props.borderRadius};
-    height:fit-content
+    height:fit-content;
+    z-index:${props=>props.zIndex}
 `
 export const H2 = styled.h2`
     color: ${props=>props.color || "#16425B"};
@@ -31,9 +32,10 @@ export const H3 = styled.h3`
 `
 export const H4 = styled.h4`
     color: ${props=>props.color || "white"};
-    padding:0px 20px;
+    padding:${props=>props.padding || "0px 20px"};
     margin:${props=>props.margin || "0px"};
-    text-align:${props=>props.textAlign}
+    text-align:${props=>props.textAlign};
+    font-weight:${props=>props.fontWeight};
 `
 
 export const Text = styled.p`
@@ -53,6 +55,7 @@ export const Image = styled.img`
     height:${props=>props.height};
     border-radius:${props=>props.borderRadius};
     padding:${props=>props.padding || "0px"};
+    margin:${props=>props.margin || "0px"};
 `
 
 export const Hero = styled.div`
@@ -62,8 +65,13 @@ export const Hero = styled.div`
     background-size: ${props=>props.bgSize};
     background-repeat: ${props=>props.bgRepeat};
     margin:${props=>props.margin};
-    background-position: right bottom;
+    background-position: ${props=>props.bgPosition || "right bottom"};
     padding:${props=>props.padding};
+    position:${props=>props.position};
+    top:${props=>props.top};
+    right:${props=>props.right};
+    transform: ${props=>props.transform};
+    z-index:${props=>props.zIndex}
 `
 
 export const Box = styled.div`
@@ -90,7 +98,7 @@ export const PullQuote = styled.blockquote`
     font-size:calc(16px + 0.4vw);
     color:#16425B;
     padding:50px;
-    text-align:center
+    text-align:center;
 `
 
 export const Container = styled(Box)`
