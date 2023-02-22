@@ -8,6 +8,7 @@ const CardBox = styled.div`
   border-radius:${props=>props.borRadius};
   background-color:${props=>props.bgColor};
   box-shadow:${props=>props.bxShadow};
+  align-items: center;
   display:flex;
   flex-direction:column;
   max-width:${props=>props.maxWidth};
@@ -27,10 +28,9 @@ export default function Card({
     bgColor="white",
     bxShadow="0px 5px 7px #16425B",
     widthImg="100%",
-    heightImg="150",
     heading="heading",
     paragraph="paragraph",
-    headingColor="black",
+    headingColor="#16425B",
     src="http://placekitten.com/160/150",
     paddingImg="20px 20px 5px 20px",
     textAlign="center",
@@ -42,16 +42,17 @@ export default function Card({
     bgImage,
     bgRepeat,
     show="ok",
-    margin=""
+    margin="20px 0",
+    paddingHeading="20px"
 
 
 }) {
 
   return (
     <CardBox margin={margin} className={classs} maxWidth={maxWidth}  minWidth={minWidth} minHeight={minHeight} width={width} height={height} bgColor={bgColor} borRadius={borRadius} bxShadow={bxShadow} bgImage={bgImage} bgSize={bgSize} bgRepeat={bgRepeat}>
-        <Image padding={paddingImg} width={widthImg} height={heightImg} src={src}></Image>
-        <H4 color={headingColor} margin="0 0 7px 0" textAlign={textAlign}>{heading}</H4>
-        {show == "ok" && <Text textAlign={textAlign}>{paragraph}</Text>}
+        <Image padding={paddingImg} width={widthImg} src={src}></Image>
+        <H4  color={headingColor} margin="0 0 10px 0" textAlign={textAlign}>{heading}</H4>
+        {show == "ok" && <Text padding={paddingHeading} textAlign={textAlign}>{paragraph}</Text>}
     </CardBox>
   )
 }
