@@ -3,6 +3,8 @@ import NavBar from '../comps/navbar'
 import Footer from '../comps/footer'
 import { Hero, H1, H2, H3, H4, Text, Box, PullQuote, Image, Container } from '../comps/global'
 import Card from '../comps/card'
+import { CardImage } from '../data/card'
+
 
 export default function Home() {
   return (
@@ -20,20 +22,12 @@ export default function Home() {
         <Hero src="/vacuum.jpg" width="55%" margin="-200px 0 0 45%" height="400px" bgSize="cover" bgPosition="center top" transform="scaleX(-1)"></Hero>
         <H1 padding="0" margin="-70px 0 0 0" borderRadius="0 30px 30px 0">Services</H1>
           <Box width="100%" padding="100px 5% 0 5%" justCont="space-evenly" flexWrap="wrap">
-            <Card src='/house.png' widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading="General Cleaning"></Card>
-            <Card src='/vacuum.png' widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading="Floors and Carpets"></Card>
-            <Card src='/kitchen.png' widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading="Kitchen and Dishwasher"></Card>
-            <Card src='/bathroom.png' widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading="Bathroom and Toilets"></Card>
-            <Card src='/bathtub.png' widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading="Tubs and Showers"></Card>
-            <Card src='/bedroom.png' widthImg="80%" paddingImg='35px' show="" maxWidth='235px' minHeight='235px'  heading="Bedroom and Living Areas"></Card>
-            <Card src='/bin.png' widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading="Empty Trash and Dusting"></Card>
-            <Card src='/glass.png' widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading="Glass/Windows"></Card>
-            <Card src='/washer.png' widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading="Laundry"></Card>
-            <Card src='/kitchen-appliance.png' widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading="Oven, Fridge, and Freezer"></Card>
-            <Card src='/closet.png' widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading="Closets"></Card>
-            <Card src='/restock-2.png' widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading="Restocking"></Card>
+            {
+              CardImage.map((o)=>(
+                <Card key={o.heading} src={o.image} widthImg="75%" paddingImg='40px' show="" maxWidth='235px' minHeight='235px'  heading={o.heading}></Card>
+              ))
+            }
           </Box>
-    
       </main>
       <Footer></Footer>
     </div>
