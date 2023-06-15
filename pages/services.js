@@ -3,7 +3,7 @@ import NavBar from '../comps/navbar'
 import Footer from '../comps/footer'
 import { Hero, H1, H2, H3, H4, Text, Box, PullQuote, Image, Container } from '../comps/global'
 import Card from '../comps/card'
-import { CardImage } from '../data/card'
+import CardImage from '../data/card.json'
 
 
 export default function Home() {
