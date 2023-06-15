@@ -25,42 +25,6 @@ export default function Home() {
 
   const r = useRouter()
 
-  // const [cardWidth, setCardWidth] = useState("150px")
-  // const [cardJustCont, setCardJustCont] = useState("")
-  // function OnLoad(){
-  //   useEffect(() => {
-  //     var Boxy = document.querySelector(".Reason")
-  //     window.addEventListener("resize", function() {
-  //       if(window.innerWidth < 850){
-  //         Boxy.style.flexDirection = "column";
-  //         // console.log(window.innerWidth);
-  //         setCardWidth("80vw")
-  //         setCardJustCont("center")
-  //       } else {
-  //         Boxy.style.flexDirection = "row";
-  //         setCardWidth("150px")
-  //         setCardJustCont("")
-  //       }  
-  //     });
-  //   });
-  // }
-
-  // const googlemap = useRef(null);
-  // useEffect(() => {
-  //   const loader = new Loader({
-  //     apiKey:process.env.NEXT_PUBLIC_API_KEY,
-  //     version: 'weekly',
-  //   });
-  //   let map; 
-  //   loader.load().then(() => {
-  //     const google = window.google;
-  //     map = new google.maps.Map(googlemap.current, {
-  //       center: {lat: -34.397, lng: 150.644},
-  //       zoom: 8,
-  //     });
-  //   });
-  // });
-
   return (
     <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
       <Head>
@@ -86,7 +50,6 @@ export default function Home() {
         <H4 color="#16425B" padding="10px 70px" fontWeight="500">What makes <Ita>She's A Keeper</Ita> stand out is the personalized cleaning, where my clients get a free quote for the first visit that allows me to speak with my new client and make sure where they would like me to prioritize my cleaning or make special requests for example to do the laundry on cleaning visits.</H4>
         <H4 color="#16425B" padding="10px 70px" fontWeight="500">I also welcome feedback to make sure my clients are satisfied and happy with the cleaning, making it a win-win since I'm happy when my clients are happy. As a member of the Tri-City community I'm serving, it brings me happiness that I can give back with helping out its members.</H4>
         <H4 color="#16425B" padding="10px 70px" fontWeight="500">Since <Ita>She's A Keeper</Ita> is a self-employed cleaning service with one housekeeper, you can be sure you will getting the consistent cleaning you expect and the security of having the same housekeeper making sure your home is neat and tidy.</H4>
-        {/* <div id="map" ref={googlemap}></div> */}
         </Container>
 
         <Container height="fit-content" aliIt="center" flexDir="column" padding="0px 0px 40px 0px" bgColor="white">
